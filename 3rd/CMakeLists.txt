@@ -24,7 +24,7 @@ target_compile_definitions(loguru PUBLIC LOGURU_WITH_STREAMS=1)
 
 
 ExternalProject_Add(extern_zlib
-        GIT_REPOSITORY https://github.com/madler/zlib.git
+        GIT_REPOSITORY https://github.com.cnpmjs.org/madler/zlib.git
         GIT_TAG v1.2.11
         INSTALL_DIR ${CMAKE_CURRENT_BINARY_DIR}/zlib/
         CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${CMAKE_CURRENT_BINARY_DIR}/zlib/
@@ -39,7 +39,7 @@ target_include_directories(zlib INTERFACE ${CMAKE_CURRENT_BINARY_DIR}/zlib/inclu
 add_dependencies(zlib extern_zlib)
 
 ExternalProject_Add(extern_cnpy
-        GIT_REPOSITORY https://github.com/rogersce/cnpy.git
+        GIT_REPOSITORY https://github.com.cnpmjs.org/rogersce/cnpy.git
         GIT_TAG e6536edb128bd0575bf07514d486eb67b5dfb04b
         CMAKE_ARGS -DCMAKE_PREFIX_PATH=${CMAKE_CURRENT_BINARY_DIR}/zlib/
         CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${CMAKE_CURRENT_BINARY_DIR}/cnpy
