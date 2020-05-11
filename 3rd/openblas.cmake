@@ -14,7 +14,7 @@
 include(ExternalProject)
 set(OPENBLAS_BIN_ROOT ${CMAKE_CURRENT_BINARY_DIR}/openblas/)
 ExternalProject_Add(extern_openblas
-        GIT_REPOSITORY https://github.com/xianyi/OpenBLAS.git
+        GIT_REPOSITORY https://github.com.cnpmjs.org/xianyi/OpenBLAS.git
         GIT_TAG v0.3.9
         INSTALL_DIR ${OPENBLAS_BIN_ROOT}
         CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${OPENBLAS_BIN_ROOT}
